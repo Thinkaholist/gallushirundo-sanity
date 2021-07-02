@@ -40,6 +40,40 @@ export default {
       //   }).error(`File should be a .zip!`),
     },
     {
+      name: 'logo',
+      type: 'image',
+      title: 'Logo',
+      description: 'Logo of the artist (SVG or PNG)',
+      options: {
+        hotspot: true,
+      },
+      // validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'Social Links',
+      name: 'socialLinks',
+      type: 'social',
+    },
+    {
+      title: 'Image Gallery',
+      name: 'imageGallery',
+      type: 'array',
+      of: [{ type: 'image', options: { hotspot: true } }],
+    },
+    {
+      title: 'Video Gallery',
+      name: 'videoGallery',
+      description: 'Please enter YouToube links',
+      type: 'array',
+      of: [
+        {
+          type: 'url',
+          validation: (Rule) =>
+            Rule.uri(['http', 'https']).error(`Should be a valid URL`),
+        },
+      ],
+    },
+    {
       name: 'published',
       title: 'Published?',
       type: 'boolean',
