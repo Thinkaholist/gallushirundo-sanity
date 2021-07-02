@@ -28,15 +28,16 @@ export default {
       name: 'pressKit',
       title: 'Press kit',
       type: 'file',
-      description: '.zip file will be accepted',
+      description: 'Only .zip file will be accepted',
       options: {
         storeOriginalFilename: true,
         accept: 'application/zip',
       },
-      validation: (Rule) =>
-        Rule.required()
-          .max(20)
-          .warning(`A bor neve ne legyen több, mint 20 karakter.`),
+      // validation: (Rule) =>
+      //   Rule.custom((file) => {
+      //     if (!file) return true;
+      //     return file.asset.extension === 'zip';
+      //   }).error(`File should be a .zip!`),
     },
     {
       name: 'published',
