@@ -25,21 +25,6 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'pressKit',
-      title: 'Press kit',
-      type: 'file',
-      description: 'Only .zip file will be accepted',
-      options: {
-        storeOriginalFilename: true,
-        accept: 'application/zip',
-      },
-      // validation: (Rule) =>
-      //   Rule.custom((file) => {
-      //     if (!file) return true;
-      //     return file.asset.extension === 'zip';
-      //   }).error(`File should be a .zip!`),
-    },
-    {
       name: 'logo',
       type: 'image',
       title: 'Logo',
@@ -50,15 +35,21 @@ export default {
       // validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Social Links',
-      name: 'socialLinks',
-      type: 'social',
+      title: 'Featured Image',
+      name: 'featuredImage',
+      type: 'imageWithInfo',
     },
     {
       title: 'Image Gallery',
       name: 'imageGallery',
       type: 'array',
-      of: [{ type: 'image', options: { hotspot: true } }],
+      of: [{ type: 'imageWithInfo' }],
+    },
+    {
+      title: 'Featured video',
+      name: 'featuredVideo',
+      type: 'youtubeLink',
+      description: 'URL should be a Youtube URL',
     },
     {
       title: 'Video Gallery',
@@ -72,6 +63,26 @@ export default {
           type: 'youtubeLink',
         },
       ],
+    },
+    {
+      title: 'Social Links',
+      name: 'socialLinks',
+      type: 'social',
+    },
+    {
+      name: 'pressKit',
+      title: 'Press kit',
+      type: 'file',
+      description: 'Only .zip file will be accepted',
+      options: {
+        storeOriginalFilename: true,
+        accept: 'application/zip',
+      },
+      // validation: (Rule) =>
+      //   Rule.custom((file) => {
+      //     if (!file) return true;
+      //     return file.asset.extension === 'zip';
+      //   }).error(`File should be a .zip!`),
     },
     {
       name: 'published',

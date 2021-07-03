@@ -34,6 +34,11 @@ export default {
           .error(`Location name must 20 characters or less.`),
     },
     {
+      title: 'Cover image',
+      name: 'cover',
+      type: 'imageWithInfo',
+    },
+    {
       name: 'artists',
       type: 'array',
       of: [
