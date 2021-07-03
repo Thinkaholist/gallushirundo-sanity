@@ -13,6 +13,8 @@ import event from './documents/event';
 import social from './objects/social';
 import youtubeLink from './objects/youtubeLink';
 import image from './objects/image';
+import youtubeVideo from './objects/youtubeVideo';
+import spotifyAlbum from './objects/spotifyAlbum';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,10 +25,12 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     artist,
-    // post,
+    post,
     event,
     social,
     youtubeLink,
     image,
+    youtubeVideo,
+    spotifyAlbum,
   ]),
 });
