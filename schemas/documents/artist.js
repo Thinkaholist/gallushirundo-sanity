@@ -67,9 +67,9 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'url',
-          validation: (Rule) =>
-            Rule.uri(['http', 'https']).error(`Should be a valid URL`),
+          title: 'YouTube link',
+          name: 'youtubeLink',
+          type: 'youtubeLink',
         },
       ],
     },

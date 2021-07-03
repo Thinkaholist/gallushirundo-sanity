@@ -18,7 +18,7 @@ export default {
       title: 'Facebook',
       name: 'facebook',
       type: 'url',
-      fieldset: 'social',
+      // fieldset: 'social',
       validation: (Rule) =>
         Rule.uri(['http', 'https']).error(`Should be a valid URL`),
     },
@@ -26,7 +26,7 @@ export default {
       title: 'Instagram',
       name: 'instagram',
       type: 'url',
-      fieldset: 'social',
+      // fieldset: 'social',
       validation: (Rule) =>
         Rule.uri(['http', 'https']).error(`Should be a valid URL`),
     },
@@ -34,7 +34,7 @@ export default {
       title: 'YouTube',
       name: 'youtube',
       type: 'url',
-      fieldset: 'social',
+      // fieldset: 'social',
       validation: (Rule) =>
         Rule.uri(['http', 'https']).error(`Should be a valid URL`),
     },
@@ -42,7 +42,7 @@ export default {
       title: 'Spotify',
       name: 'spotify',
       type: 'url',
-      fieldset: 'social',
+      // fieldset: 'social',
       validation: (Rule) =>
         Rule.uri(['http', 'https']).error(`Should be a valid URL`),
     },
@@ -50,7 +50,7 @@ export default {
       title: 'Website',
       name: 'website',
       type: 'url',
-      fieldset: 'social',
+      // fieldset: 'social',
       validation: (Rule) =>
         Rule.uri(['http', 'https']).error(`Should be a valid URL`),
     },

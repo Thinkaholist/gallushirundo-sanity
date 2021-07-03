@@ -11,6 +11,7 @@ import event from './documents/event';
 
 // object schemas
 import social from './objects/social';
+import youtubeLink from './objects/youtubeLink';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,5 +25,6 @@ export default createSchema({
     // post,
     event,
     social,
+    youtubeLink,
   ]),
 });
