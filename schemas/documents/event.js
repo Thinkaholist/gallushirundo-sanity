@@ -62,21 +62,9 @@ export default {
         {
           type: 'reference',
           to: [{ type: 'artist' }],
-          options: {
-            filter: 'published == $published',
-            filterParams: { published: true },
-          },
         },
       ],
       validation: (Rule) => Rule.unique().min(1),
-    },
-    {
-      name: 'published',
-      title: 'Published?',
-      type: 'boolean',
-      description:
-        "If published it will be visible on the website if not it's a draft.",
-      initialValue: false,
     },
   ],
 };

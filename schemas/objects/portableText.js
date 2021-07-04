@@ -38,10 +38,6 @@ export default {
                     type: 'event',
                   },
                 ],
-                options: {
-                  filter: 'published == $published',
-                  filterParams: { published: true },
-                },
               },
             ],
             blockEditor: {

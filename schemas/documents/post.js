@@ -34,13 +34,5 @@ export default {
       name: 'body',
       type: 'portableText',
     },
-    {
-      name: 'published',
-      title: 'Published?',
-      type: 'boolean',
-      description:
-        "If published it will be visible on the website if not it's a draft.",
-      initialValue: false,
-    },
   ],
 };
