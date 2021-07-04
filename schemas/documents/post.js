@@ -1,8 +1,11 @@
+import React from 'react';
+import { FiPenTool } from 'react-icons/fi';
+
 export default {
   type: 'document',
   name: 'post',
   title: 'Post',
-  icon: () => '📝',
+  icon: () => <FiPenTool />,
   fields: [
     {
       title: 'Title',

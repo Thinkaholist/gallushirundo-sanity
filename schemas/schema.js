@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import artist from './documents/artist';
 import post from './documents/post';
 import event from './documents/event';
+import siteSettings from './documents/siteSettings';
 
 // object schemas
 import social from './objects/social';
@@ -36,5 +37,6 @@ export default createSchema({
     spotifyAlbum,
     portableText,
     mainEvent,
+    siteSettings,
   ]),
 });

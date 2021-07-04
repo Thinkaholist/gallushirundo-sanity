@@ -1,8 +1,11 @@
+import React from 'react';
+import { FiMusic } from 'react-icons/fi';
+
 export default {
   type: 'document',
   name: 'artist',
   title: 'Artist',
-  icon: () => '👨🏻‍🎤',
+  icon: () => <FiMusic />,
   fields: [
     {
       name: 'name',

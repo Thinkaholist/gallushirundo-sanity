@@ -1,8 +1,11 @@
+import React from 'react';
+import { FiCalendar } from 'react-icons/fi';
+
 export default {
   type: 'document',
   name: 'event',
   title: 'Event',
-  icon: () => '📅',
+  icon: () => <FiCalendar />,
   fields: [
     {
       name: 'title',
