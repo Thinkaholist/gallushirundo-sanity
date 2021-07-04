@@ -4,18 +4,15 @@ export default {
     //   name: 'sanity-tutorials',
     // },
     {
-      name: 'project-info',
+      name: 'document-list',
+      options: {
+        title: 'Last Edited Documents',
+        order: '_updatedAt desc',
+        types: ['post', 'event', 'artist'],
+      },
       layout: {
         width: 'medium',
         height: 'auto',
-      },
-    },
-    {
-      name: 'document-list',
-      options: {
-        title: 'Last Edited Posts',
-        order: '_updatedAt desc',
-        types: ['post'],
       },
     },
     {
@@ -25,7 +22,7 @@ export default {
         query: '*[_type == "event" && date >= $now] | order(date asc) [0...10]',
       },
       layout: {
-        width: 'small',
+        width: 'medium',
         height: 'auto',
       },
     },
@@ -33,6 +30,13 @@ export default {
       name: 'project-users',
       layout: {
         width: 'small',
+        height: 'auto',
+      },
+    },
+    {
+      name: 'project-info',
+      layout: {
+        width: 'medium',
         height: 'auto',
       },
     },
