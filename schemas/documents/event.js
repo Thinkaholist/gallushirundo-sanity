@@ -11,8 +11,18 @@ export default {
       description: 'Title of the Event.',
       validation: (Rule) =>
         Rule.required()
-          .max(40)
-          .error(`Title of the event should 40 characters or less.`),
+          .max(60)
+          .error(`Title of the event should 60 characters or less.`),
+    },
+    {
+      name: 'slug',
+      title: 'URL identifier (slug)',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 100,
+      },
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Date',
@@ -28,6 +38,7 @@ export default {
       title: 'Location',
       name: 'location',
       type: 'string',
+      description: 'eg. Warsaw, Poland',
       validation: (Rule) =>
         Rule.required()
           .max(20)
@@ -39,6 +50,12 @@ export default {
       type: 'imageWithInfo',
     },
     {
+      title: 'Main Event',
+      name: 'mainEvent',
+      type: 'mainEvent',
+    },
+    {
+      title: 'Related Artist(s)',
       name: 'artists',
       type: 'array',
       of: [
@@ -52,6 +69,14 @@ export default {
         },
       ],
       validation: (Rule) => Rule.unique().min(1),
+    },
+    {
+      name: 'published',
+      title: 'Published?',
+      type: 'boolean',
+      description:
+        "If published it will be visible on the website if not it's a draft.",
+      initialValue: false,
     },
   ],
 };

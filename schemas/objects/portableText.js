@@ -27,7 +27,21 @@ export default {
                 title: 'Reference',
                 name: 'reference',
                 type: 'reference',
-                to: [{ type: 'artist' }, { type: 'post' }],
+                to: [
+                  {
+                    type: 'artist',
+                  },
+                  {
+                    type: 'post',
+                  },
+                  {
+                    type: 'event',
+                  },
+                ],
+                options: {
+                  filter: 'published == $published',
+                  filterParams: { published: true },
+                },
               },
             ],
             blockEditor: {
