@@ -10,26 +10,19 @@ export default {
       type: 'string',
     },
     {
-      title: 'Text',
-      name: 'text',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-          marks: {
-            annotations: [
-              {
-                name: 'artist',
-                title: 'Artist',
-                type: 'reference',
-                to: { type: 'artist' },
-              },
-            ],
-          },
-        },
-        { type: 'youtubeVideo' },
-        { type: 'spotifyAlbum' },
-      ],
+      name: 'slug',
+      title: 'URL identifier (slug)',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 100,
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      title: 'Body',
+      name: 'body',
+      type: 'portableText',
     },
   ],
 };

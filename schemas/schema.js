@@ -15,6 +15,7 @@ import youtubeLink from './objects/youtubeLink';
 import image from './objects/image';
 import youtubeVideo from './objects/youtubeVideo';
 import spotifyAlbum from './objects/spotifyAlbum';
+import portableText from './objects/portableText';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,5 +33,6 @@ export default createSchema({
     image,
     youtubeVideo,
     spotifyAlbum,
+    portableText,
   ]),
 });
