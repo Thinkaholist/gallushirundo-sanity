@@ -44,8 +44,8 @@ export default {
       description: 'eg. Warsaw, Poland',
       validation: (Rule) =>
         Rule.required()
-          .max(20)
-          .error(`Location name must 20 characters or less.`),
+          .max(30)
+          .error(`Location name must 30 characters or less.`),
     },
     {
       title: 'Cover image',
