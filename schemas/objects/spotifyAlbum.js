@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SpotifyAlbumPreview({ value: { albumLink } }) {
+function SpotifyAlbumPreview({ value: { albumLink, isCompact } }) {
   const albumId = albumLink?.split('/')[4]?.split('?')[0];
 
   if (!albumId || albumId.length !== 22) {
@@ -15,7 +15,7 @@ function SpotifyAlbumPreview({ value: { albumLink } }) {
         title='Spotify Album Preview'
         src={embedUrl}
         width='100%'
-        height='380'
+        height={isCompact ? '80' : '380'}
         frameBorder='0'
         allowtransparency='true'
         allow='encrypted-media'
@@ -34,10 +34,17 @@ export default {
       name: 'albumLink',
       type: 'url',
     },
+    {
+      title: 'Compact View',
+      name: 'compactView',
+      type: 'boolean',
+      initialValue: false,
+    },
   ],
   preview: {
     select: {
       albumLink: 'albumLink',
+      isCompact: 'compactView',
     },
     component: SpotifyAlbumPreview,
   },
