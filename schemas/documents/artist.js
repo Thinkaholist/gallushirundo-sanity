@@ -1,5 +1,13 @@
 import React from 'react';
 import { FiMusic } from 'react-icons/fi';
+import urlBuilder from '@sanity/image-url';
+
+function urlFor(source) {
+  return urlBuilder({
+    projectId: 'q7xlgfk0',
+    dataset: 'production',
+  }).image(source);
+}
 
 export default {
   type: 'document',
@@ -35,7 +43,7 @@ export default {
       options: {
         hotspot: true,
       },
-      // validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Featured Image',
@@ -88,4 +96,32 @@ export default {
       //   }).error(`File should be a .zip!`),
     },
   ],
+  preview: {
+    select: {
+      title: 'name',
+      media: 'logo',
+    },
+    prepare(selection) {
+      const { title, media } = selection;
+
+      return {
+        title: title,
+        // subtitle: title,
+        media: (
+          <div
+            style={{
+              // border: '1px solid rebeccapurple',
+              // borderRadius: '50%',
+              display: 'grid',
+              placeItems: 'center',
+              width: 50,
+              height: 38,
+            }}
+          >
+            <img src={urlFor(media.asset._ref)} alt='logo' width='98%' />
+          </div>
+        ),
+      };
+    },
+  },
 };

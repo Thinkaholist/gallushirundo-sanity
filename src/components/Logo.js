@@ -24,7 +24,7 @@ const LogoStyles = styled.div`
 const Logo = () => (
   <LogoStyles>
     {/* Kiszedtem a logo-t, amíg nincs meg fehérben */}
-    <img src='/static/logo.png' alt='Gallus &amp; Hirundo logo' />
+    {/* <img src='/static/logo.png' alt='Gallus &amp; Hirundo logo' /> */}
     <span>Gallus &amp; Hirundo</span>
   </LogoStyles>
 );
