@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FiPenTool } from 'react-icons/fi';
+// import { FiPenTool } from 'react-icons/fi';
+import { FcDocument } from 'react-icons/fc';
 // Important items to allow form fields to work properly and patch the dataset.
 import { PatchEvent, set } from 'part:@sanity/form-builder/patch-event';
 import FormField from 'part:@sanity/components/formfields/default';
@@ -43,7 +44,7 @@ export default {
   type: 'document',
   name: 'post',
   title: 'Post',
-  icon: () => <FiPenTool />,
+  icon: () => <FcDocument />,
   fields: [
     {
       title: 'Title',

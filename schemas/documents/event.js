@@ -1,11 +1,12 @@
 import React from 'react';
-import { FiCalendar } from 'react-icons/fi';
+// import { FiCalendar } from 'react-icons/fi';
+import { FcPlanner } from 'react-icons/fc';
 
 export default {
   type: 'document',
   name: 'event',
   title: 'Event',
-  icon: () => <FiCalendar />,
+  icon: () => <FcPlanner />,
   fields: [
     {
       name: 'title',

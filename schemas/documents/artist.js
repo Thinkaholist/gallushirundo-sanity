@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiMusic } from 'react-icons/fi';
+// import { FiMusic } from 'react-icons/fi';
+import { FcMusic } from 'react-icons/fc';
 import urlBuilder from '@sanity/image-url';
 
 function urlFor(source) {
@@ -13,7 +14,7 @@ export default {
   type: 'document',
   name: 'artist',
   title: 'Artist',
-  icon: () => <FiMusic />,
+  icon: () => <FcMusic />,
   fields: [
     {
       name: 'name',
