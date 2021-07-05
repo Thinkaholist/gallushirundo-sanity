@@ -3,7 +3,7 @@ import React from 'react';
 import { FcMusic } from 'react-icons/fc';
 import urlBuilder from '@sanity/image-url';
 
-function urlFor(source) {
+export function urlFor(source) {
   return urlBuilder({
     projectId: 'q7xlgfk0',
     dataset: 'production',

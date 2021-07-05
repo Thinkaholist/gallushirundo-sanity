@@ -13,11 +13,12 @@ import siteSettings from './documents/siteSettings';
 // object schemas
 import social from './objects/social';
 import youtubeLink from './objects/youtubeLink';
-import image from './objects/image';
+import imageWithInfo from './objects/imageWithInfo';
 import youtubeVideo from './objects/youtubeVideo';
 import spotifyAlbum from './objects/spotifyAlbum';
 import portableText from './objects/portableText';
 import mainEvent from './objects/mainEvent';
+import imageEmbed from './objects/imageEmbed';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,11 +33,12 @@ export default createSchema({
     event,
     social,
     youtubeLink,
-    image,
+    imageWithInfo,
     youtubeVideo,
     spotifyAlbum,
     portableText,
     mainEvent,
     siteSettings,
+    imageEmbed,
   ]),
 });

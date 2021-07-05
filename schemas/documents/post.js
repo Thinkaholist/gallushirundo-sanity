@@ -87,7 +87,7 @@ export default {
     select: {
       title: 'title',
       subtitle: 'excerpt',
-      // media: 'featuredImage',
+      media: 'featuredImage',
     },
   },
 };
