@@ -62,6 +62,11 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Featured Image',
+      name: 'featuredImage',
+      type: 'imageWithInfo',
+    },
+    {
       title: 'Excerpt',
       name: 'excerpt',
       type: 'text',
@@ -78,4 +83,11 @@ export default {
       type: 'portableText',
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'excerpt',
+      // media: 'featuredImage',
+    },
+  },
 };

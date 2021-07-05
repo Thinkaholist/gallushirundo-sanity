@@ -6,9 +6,8 @@ export default {
     {
       name: 'document-list',
       options: {
-        title: 'Last Edited Documents',
-        order: '_updatedAt desc',
-        types: ['post', 'event', 'artist'],
+        title: 'Upcoming Events',
+        query: '*[_type == "event" && date >= $now] | order(date asc) [0...10]',
       },
       layout: {
         width: 'medium',
@@ -18,8 +17,9 @@ export default {
     {
       name: 'document-list',
       options: {
-        title: 'Upcoming Events',
-        query: '*[_type == "event" && date >= $now] | order(date asc) [0...10]',
+        title: 'Last Edited Documents',
+        order: '_updatedAt desc',
+        types: ['post', 'event', 'artist'],
       },
       layout: {
         width: 'medium',

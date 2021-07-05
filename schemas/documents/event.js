@@ -71,4 +71,11 @@ export default {
       validation: (Rule) => Rule.unique().min(1),
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'date',
+      media: 'cover',
+    },
+  },
 };
