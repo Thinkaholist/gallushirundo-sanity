@@ -71,6 +71,7 @@ export default {
     },
     { type: 'youtubeVideo' },
     { type: 'spotifyAlbum' },
+    { type: 'spotifyTrack' },
     { type: 'imageEmbed' },
   ],
 };

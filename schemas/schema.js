@@ -16,6 +16,7 @@ import youtubeLink from './objects/youtubeLink';
 import imageWithInfo from './objects/imageWithInfo';
 import youtubeVideo from './objects/youtubeVideo';
 import spotifyAlbum from './objects/spotifyAlbum';
+import spotifyTrack from './objects/spotifyTrack';
 import portableText from './objects/portableText';
 import mainEvent from './objects/mainEvent';
 import imageEmbed from './objects/imageEmbed';
@@ -36,6 +37,7 @@ export default createSchema({
     imageWithInfo,
     youtubeVideo,
     spotifyAlbum,
+    spotifyTrack,
     portableText,
     mainEvent,
     siteSettings,
