@@ -62,6 +62,12 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Published date',
+      name: 'publishedDate',
+      type: 'datetime',
+      validation: (Rule) => Rule.required(),
+    },
+    {
       title: 'Featured Image',
       name: 'featuredImage',
       type: 'imageWithInfo',
