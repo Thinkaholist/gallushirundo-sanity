@@ -20,6 +20,8 @@ import spotifyTrack from './objects/spotifyTrack';
 import portableText from './objects/portableText';
 import mainEvent from './objects/mainEvent';
 import imageEmbed from './objects/imageEmbed';
+// import instagramEmbed from './objects/instagramEmbed';
+// import eventEmbed from './objects/eventEmbed';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -42,5 +44,7 @@ export default createSchema({
     mainEvent,
     siteSettings,
     imageEmbed,
+    // instagramEmbed,
+    // eventEmbed,
   ]),
 });

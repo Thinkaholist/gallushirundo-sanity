@@ -6945,6 +6945,11 @@ react-tiny-virtual-list@^2.0.5:
   dependencies:
     prop-types "^15.5.7"
 
+react-use-promise@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/react-use-promise/-/react-use-promise-0.3.1.tgz#8decbc3f659e2e65f1c2e5cd865eb04442122b05"
+  integrity sha512-tIsWJDVidRRIYdCr3AeEwE4IWyQreK/tyULd9mj4KWUdw5O9sUQa1X3lIQ8eDECUaqvmfV1qypZDfDeS2okRJw==
+
 react@^17.0:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"

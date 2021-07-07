@@ -69,9 +69,11 @@ export default {
         ],
       },
     },
+    { type: 'imageEmbed' },
     { type: 'youtubeVideo' },
     { type: 'spotifyAlbum' },
     { type: 'spotifyTrack' },
-    { type: 'imageEmbed' },
+    // { type: 'eventEmbed' },
+    // { type: 'instagramEmbed' },
   ],
 };
