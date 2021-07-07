@@ -82,6 +82,18 @@ export default {
       type: 'social',
     },
     {
+      title: 'Agencies',
+      name: 'agencies',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'agency' }],
+        },
+      ],
+      validation: (Rule) => Rule.unique(),
+    },
+    {
       name: 'pressKit',
       title: 'Press kit',
       type: 'file',
