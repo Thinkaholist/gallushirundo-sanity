@@ -2,13 +2,13 @@ import React from 'react';
 import usePromise from 'react-use-promise';
 import { client } from '../../src/client';
 
-function PostEmbed(props) {
-  const postId = props?.value?.post?._ref;
+function EmbedEvent(props) {
+  const eventId = props?.value?.event?._ref;
 
-  const query = `*[_id == $postId][0]`;
+  const query = `*[_id == $eventId][0]`;
 
   const [result, error, state] = usePromise(
-    () => client.fetch(query, { postId }),
+    () => client.fetch(query, { eventId }),
     []
   );
 
@@ -18,7 +18,9 @@ function PostEmbed(props) {
         <>
           <div style={{ border: '1px solid', padding: 10 }}>
             <h3>{result.title}</h3>
-            <p>{result.publishedDate}</p>
+            <p>
+              {result.date} | {result.location}{' '}
+            </p>
           </div>
         </>
       )}
@@ -27,21 +29,21 @@ function PostEmbed(props) {
 }
 
 export default {
-  title: 'Post embed',
-  name: 'postEmbed',
+  title: 'Event embed',
+  name: 'eventEmbed',
   type: 'object',
   fields: [
     {
-      title: 'post',
-      name: 'post',
+      title: 'event',
+      name: 'event',
       type: 'reference',
-      to: [{ type: 'post' }],
+      to: [{ type: 'event' }],
     },
   ],
   preview: {
     select: {
-      post: 'post',
+      event: 'event',
     },
-    component: PostEmbed,
+    component: EmbedEvent,
   },
 };

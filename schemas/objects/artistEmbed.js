@@ -2,13 +2,13 @@ import React from 'react';
 import usePromise from 'react-use-promise';
 import { client } from '../../src/client';
 
-function PostEmbed(props) {
-  const postId = props?.value?.post?._ref;
+function ArtistEmbed(props) {
+  const artistId = props?.value?.artist?._ref;
 
-  const query = `*[_id == $postId][0]`;
+  const query = `*[_id == $artistId][0]`;
 
   const [result, error, state] = usePromise(
-    () => client.fetch(query, { postId }),
+    () => client.fetch(query, { artistId }),
     []
   );
 
@@ -17,8 +17,8 @@ function PostEmbed(props) {
       {result && (
         <>
           <div style={{ border: '1px solid', padding: 10 }}>
-            <h3>{result.title}</h3>
-            <p>{result.publishedDate}</p>
+            <h3>{result.name}</h3>
+            <p>{result.bio}</p>
           </div>
         </>
       )}
@@ -27,21 +27,21 @@ function PostEmbed(props) {
 }
 
 export default {
-  title: 'Post embed',
-  name: 'postEmbed',
+  title: 'Artist embed',
+  name: 'artistEmbed',
   type: 'object',
   fields: [
     {
-      title: 'post',
-      name: 'post',
+      title: 'artist',
+      name: 'artist',
       type: 'reference',
-      to: [{ type: 'post' }],
+      to: [{ type: 'artist' }],
     },
   ],
   preview: {
     select: {
-      post: 'post',
+      artist: 'artist',
     },
-    component: PostEmbed,
+    component: ArtistEmbed,
   },
 };
