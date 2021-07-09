@@ -24,7 +24,7 @@ export default {
       options: {
         title: 'Last Edited Documents',
         order: '_updatedAt desc',
-        types: ['post', 'event', 'artist', 'agency'],
+        types: ['post', 'event', 'artist', 'agency', 'category'],
       },
       layout: {
         width: 'medium',

@@ -68,6 +68,13 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Category',
+      name: 'category',
+      type: 'reference',
+      to: [{ type: 'category' }],
+      validation: (Rule) => Rule.required(),
+    },
+    {
       title: 'Featured Image',
       name: 'featuredImage',
       type: 'imageWithInfo',

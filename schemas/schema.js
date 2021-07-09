@@ -10,6 +10,7 @@ import post from './documents/post';
 import event from './documents/event';
 import siteSettings from './documents/siteSettings';
 import agency from './documents/agency';
+import category from './documents/category';
 
 // object schemas
 import social from './objects/social';
@@ -52,5 +53,6 @@ export default createSchema({
     postEmbed,
     artistEmbed,
     agency,
+    category,
   ]),
 });
