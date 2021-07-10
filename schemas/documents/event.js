@@ -74,8 +74,17 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'date',
+      date: 'date',
       media: 'cover',
+    },
+    prepare(selection) {
+      const { title, date, media } = selection;
+
+      return {
+        title,
+        subtitle: `🗓 ${date}`,
+        media,
+      };
     },
   },
 };
