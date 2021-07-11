@@ -52,6 +52,7 @@ export default {
       title: 'Cover image',
       name: 'cover',
       type: 'imageWithInfo',
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Main Event',
@@ -83,7 +84,7 @@ export default {
       return {
         title,
         subtitle: `🗓 ${date}`,
-        media,
+        media: media.image,
       };
     },
   },

@@ -1,11 +1,17 @@
 export default {
   title: 'Image with info',
-  type: 'image',
+  type: 'object',
   name: 'imageWithInfo',
-  options: {
-    hotspot: true,
-  },
   fields: [
+    {
+      title: 'Image',
+      name: 'image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      validation: (Rule) => Rule.required(),
+    },
     {
       name: 'caption',
       type: 'string',
