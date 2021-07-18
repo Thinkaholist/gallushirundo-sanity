@@ -10,9 +10,9 @@ import { TextArea } from '@sanity/ui';
 const TextWithCounter = React.forwardRef((props, ref) => {
   const { type, onChange, value } = props;
   const [count, setCount] = useState(value?.length || 0);
-  const [color, setColor] = useState(value?.length >= 141 ? 'red' : '' || '');
+  const [color, setColor] = useState(value?.length >= 251 ? 'red' : '' || '');
   const [errorText, setErrorText] = useState(
-    value?.length >= 141 ? "Sorry, it's too long" : '' || ''
+    value?.length >= 251 ? "Sorry, it's too long" : '' || ''
   );
 
   return (
@@ -27,12 +27,12 @@ const TextWithCounter = React.forwardRef((props, ref) => {
           onChange={(event) => {
             onChange(PatchEvent.from(set(event.target.value)));
             setCount(event.target.value.length);
-            setColor(count >= 141 ? 'red' : '');
-            setErrorText(count >= 141 ? "Sorry, it's too long" : '');
+            setColor(count >= 251 ? 'red' : '');
+            setErrorText(count >= 251 ? "Sorry, it's too long" : '');
           }}
         />
         <small style={{ color }}>
-          {count} / 140{' '}
+          {count} / 250{' '}
           {errorText && <span style={{ color: 'red' }}>{errorText}</span>}
         </small>
       </FormField>
@@ -85,10 +85,10 @@ export default {
       type: 'text',
       inputComponent: TextWithCounter,
       description:
-        'A short summary of what is this article about (Max. 140 characters)',
+        'A short summary of what is this article about (Max. 250 characters)',
       rows: 3,
       validation: (Rule) =>
-        Rule.required().max(140).error(`Excerpt should 140 characters maximum`),
+        Rule.required().max(250).error(`Excerpt should 250 characters maximum`),
     },
     {
       title: 'Body',

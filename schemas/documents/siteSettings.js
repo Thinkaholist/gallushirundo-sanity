@@ -14,5 +14,15 @@ export default {
       title: 'Site Description',
       type: 'text',
     },
+    {
+      name: 'keywords',
+      type: 'array',
+      title: 'Keywords',
+      description: 'Add keywords that describes your portfolio.',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+    },
   ],
 };
