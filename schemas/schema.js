@@ -11,6 +11,7 @@ import event from './documents/event';
 import siteSettings from './documents/siteSettings';
 import agency from './documents/agency';
 import category from './documents/category';
+import homePage from './documents/homePage';
 
 // object schemas
 import social from './objects/social';
@@ -54,5 +55,6 @@ export default createSchema({
     artistEmbed,
     agency,
     category,
+    homePage,
   ]),
 });

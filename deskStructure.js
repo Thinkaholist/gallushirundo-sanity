@@ -1,14 +1,18 @@
 import S from '@sanity/desk-tool/structure-builder';
 import React from 'react';
-// import { FiSettings } from 'react-icons/fi';
-import { FcSettings } from 'react-icons/fc';
+import { FcSettings, FcHome } from 'react-icons/fc';
 
 export default () =>
   S.list()
     .title('Contents')
     .items([
+      S.listItem()
+        .title('Home Page')
+        .icon(() => <FcHome />)
+        .child(S.document().schemaType('homePage').documentId('homePage')),
+      S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => !['siteSettings'].includes(item.getId())
+        (item) => !['siteSettings', 'homePage'].includes(item.getId())
       ),
       S.divider(),
       S.listItem()
