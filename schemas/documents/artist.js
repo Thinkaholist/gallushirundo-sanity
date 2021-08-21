@@ -154,6 +154,12 @@ export default {
       //     return file.asset.extension === 'zip';
       //   }).error(`File should be a .zip!`),
     },
+    {
+      title: 'Styles',
+      name: 'styles',
+      type: 'styles',
+      validation: (Rule) => Rule.required(),
+    },
   ],
   preview: {
     select: {

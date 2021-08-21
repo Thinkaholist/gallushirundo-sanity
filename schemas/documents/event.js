@@ -39,6 +39,13 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Event info',
+      name: 'eventInfo',
+      type: 'url',
+      description: 'Facebook event link / Tixa link... etc.',
+      validation: (Rule) => Rule.required(),
+    },
+    {
       title: 'Location',
       name: 'location',
       type: 'string',

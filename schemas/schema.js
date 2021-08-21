@@ -27,6 +27,7 @@ import imageEmbed from './objects/imageEmbed';
 import eventEmbed from './objects/eventEmbed';
 import postEmbed from './objects/postEmbed';
 import artistEmbed from './objects/artistEmbed';
+import styles from './objects/styles';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -56,5 +57,6 @@ export default createSchema({
     agency,
     category,
     homePage,
+    styles,
   ]),
 });
