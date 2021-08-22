@@ -115,7 +115,7 @@ export default {
           type: 'youtubeLink',
         },
       ],
-      validation: (Rule) => Rule.required().min(1),
+      validation: (Rule) => Rule.required().min(1).max(3),
     },
     {
       title: 'Social Links',
