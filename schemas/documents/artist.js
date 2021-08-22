@@ -104,12 +104,6 @@ export default {
       of: [{ type: 'imageWithInfo' }],
     },
     {
-      title: 'Featured video',
-      name: 'featuredVideo',
-      type: 'youtubeLink',
-      description: 'URL should be a Youtube URL',
-    },
-    {
       title: 'Video Gallery',
       name: 'videoGallery',
       description: 'Please enter YouToube links',
@@ -121,6 +115,7 @@ export default {
           type: 'youtubeLink',
         },
       ],
+      validation: (Rule) => Rule.required().min(1),
     },
     {
       title: 'Social Links',
