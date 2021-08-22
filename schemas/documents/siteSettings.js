@@ -15,6 +15,13 @@ export default {
       type: 'text',
     },
     {
+      name: 'siteUrl',
+      title: 'Site URL',
+      type: 'url',
+      validation: (Rule) =>
+        Rule.required().uri(['http', 'https']).error(`Should be a valid URL`),
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',

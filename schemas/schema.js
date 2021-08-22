@@ -12,6 +12,7 @@ import siteSettings from './documents/siteSettings';
 import agency from './documents/agency';
 import category from './documents/category';
 import homePage from './documents/homePage';
+import contactPage from './documents/contactPage';
 
 // object schemas
 import social from './objects/social';
@@ -58,5 +59,6 @@ export default createSchema({
     category,
     homePage,
     styles,
+    contactPage,
   ]),
 });

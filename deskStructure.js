@@ -1,6 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder';
 import React from 'react';
-import { FcSettings, FcHome } from 'react-icons/fc';
+import { FcSettings, FcHome, FcPhone } from 'react-icons/fc';
 
 export default () =>
   S.list()
@@ -10,9 +10,16 @@ export default () =>
         .title('Home Page')
         .icon(() => <FcHome />)
         .child(S.document().schemaType('homePage').documentId('homePage')),
+      S.listItem()
+        .title('Contact Page')
+        .icon(() => <FcPhone />)
+        .child(
+          S.document().schemaType('contactPage').documentId('contactPage')
+        ),
       S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => !['siteSettings', 'homePage'].includes(item.getId())
+        (item) =>
+          !['siteSettings', 'homePage', 'contactPage'].includes(item.getId())
       ),
       S.divider(),
       S.listItem()
