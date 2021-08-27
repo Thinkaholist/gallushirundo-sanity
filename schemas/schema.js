@@ -13,6 +13,8 @@ import agency from './documents/agency';
 import category from './documents/category';
 import homePage from './documents/homePage';
 import contactPage from './documents/contactPage';
+import eventsPage from './documents/eventsPage';
+import singleArtistPage from './documents/singleArtistPage';
 
 // object schemas
 import social from './objects/social';
@@ -60,5 +62,7 @@ export default createSchema({
     homePage,
     styles,
     contactPage,
+    eventsPage,
+    singleArtistPage,
   ]),
 });
