@@ -84,7 +84,7 @@ export default {
           to: [{ type: 'artist' }],
         },
       ],
-      validation: (Rule) => Rule.unique().min(1),
+      validation: (Rule) => Rule.required().unique().min(1),
     },
     {
       title: 'Featured Image',
