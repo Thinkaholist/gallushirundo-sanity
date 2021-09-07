@@ -150,6 +150,15 @@ export default {
       //   }).error(`File should be a .zip!`),
     },
     {
+      title: 'Tagline',
+      name: 'tagline',
+      type: 'text',
+      description: 'A sentence tagline about the artist (Max. 242 characters)',
+      rows: 4,
+      validation: (Rule) =>
+        Rule.required().max(242).error(`Tagline should 242 characters maximum`),
+    },
+    {
       title: 'Styles',
       name: 'styles',
       type: 'styles',

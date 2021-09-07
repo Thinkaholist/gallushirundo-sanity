@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 :root {
   --brand-primary: #286fb4;
-  /* --brand-secondary: var(--gvdb-accent-01); */
-  /* --font-family-base: "IBM Plex Sans", sans-serif; */
+  /* --brand-secondary: blue; */
+
+  /* Typography */
+  /* --font-family-base: 'Karla', sans-serif;
+  --font-size-base: 18px; */
   /* --text-color: black; */
-  /* --main-navigation-color: #f0f2f5; */
-  /* --main-navigation-color--inverted: var(--gvdb-white); */
+
+  /* --main-navigation-color: blue; */
+  /* --main-navigation-color--inverted: blue; */
   /* --body-bg: #e7e7e1; */
-  /* --body-text: var(--gvdb-base-dark); */
+  /* --body-text: black */
 }

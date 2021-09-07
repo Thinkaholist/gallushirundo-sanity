@@ -75,6 +75,18 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Related Artist(s)',
+      name: 'artists',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'artist' }],
+        },
+      ],
+      validation: (Rule) => Rule.unique().min(1),
+    },
+    {
       title: 'Featured Image',
       name: 'featuredImage',
       type: 'imageWithInfo',

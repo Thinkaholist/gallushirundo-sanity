@@ -73,9 +73,9 @@ export default {
     { type: 'youtubeVideo' },
     { type: 'spotifyAlbum' },
     { type: 'spotifyTrack' },
-    { type: 'eventEmbed' },
-    { type: 'postEmbed' },
-    { type: 'artistEmbed' },
+    // { type: 'eventEmbed' },
+    // { type: 'postEmbed' },
+    // { type: 'artistEmbed' },
     // { type: 'instagramEmbed' },
   ],
 };

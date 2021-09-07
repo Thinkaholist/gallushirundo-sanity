@@ -1,18 +1,20 @@
 import React from 'react';
 import { urlFor } from '../documents/artist';
 
-function ImagePreview({ value: { image } }) {
+function ImagePreview(props) {
   return (
     <>
       <div>
         <img
-          src={urlFor(image?.asset)}
-          alt={image?.altText}
-          style={{ width: '100%' }}
+          src={urlFor(props?.value?.image?.image?.asset)}
+          alt={props?.value?.image?.altText}
+          style={{ width: '80%', display: 'block', margin: '0 auto' }}
         />
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        {image?.caption && <small>{image.caption}</small>}
+        {props?.value?.image?.caption && (
+          <small>{props?.value?.image.caption}</small>
+        )}
       </div>
     </>
   );
