@@ -7,9 +7,12 @@ function ImagePreview(props) {
   const ext = props.value?.image?.image?.asset?._ref.split('-').at(-1);
   const imageLink = `https://cdn.sanity.io/images/q7xlgfk0/production/${imageId}.${ext}`;
 
+  console.log(imageLink);
+
   return (
     <>
       <div>
+        <pre>{JSON.stringify(props, null, 2)}</pre>
         <img
           src={imageLink}
           style={{
