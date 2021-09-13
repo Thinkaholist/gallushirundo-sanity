@@ -90,6 +90,7 @@ export default {
       title: 'Featured Image',
       name: 'featuredImage',
       type: 'imageWithInfo',
+      validation: (Rule) => Rule.required(),
     },
     {
       title: 'Excerpt',

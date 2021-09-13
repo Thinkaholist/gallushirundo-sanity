@@ -2,13 +2,22 @@ import React from 'react';
 import { urlFor } from '../documents/artist';
 
 function ImagePreview(props) {
+  const imageId = props.value?.image?.image?.asset?._ref.slice(6, -4);
+  // const ext = props.value?.image?.image?.asset?._ref.slice(-3);
+  const ext = props.value?.image?.image?.asset?._ref.split('-').at(-1);
+  const imageLink = `https://cdn.sanity.io/images/q7xlgfk0/production/${imageId}.${ext}`;
+
   return (
     <>
       <div>
         <img
-          src={urlFor(props?.value?.image?.image?.asset)}
-          alt={props?.value?.image?.altText}
-          style={{ width: '80%', display: 'block', margin: '0 auto' }}
+          src={imageLink}
+          style={{
+            display: 'block',
+            width: '100%',
+            height: 300,
+            objectFit: 'contain',
+          }}
         />
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
