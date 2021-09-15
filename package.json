@@ -2,7 +2,7 @@
   "name": "gallushirundobackend",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Sanity Studio for gallushirundo.hu",
   "main": "package.json",
   "author": "Palágyi Máté <mate@fmz.ngo>",
   "license": "UNLICENSED",
