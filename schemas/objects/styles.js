@@ -1,6 +1,8 @@
 export default {
   title: 'Styles',
   name: 'styles',
+  description:
+    'Give a number between 0 and 100 to describe how relevant this style to your band.',
   type: 'object',
   fields: [
     {
