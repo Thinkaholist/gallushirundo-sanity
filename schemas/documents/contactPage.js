@@ -5,6 +5,14 @@ export default {
   __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
+      name: 'title',
+      title: 'Title',
+      type: 'text',
+      rows: 3,
+      validation: (Rule) =>
+        Rule.required().max(150).error('Should be max 150 characters'),
+    },
+    {
       name: 'contactImage',
       title: 'Contact Image',
       type: 'imageWithInfo',
@@ -13,6 +21,31 @@ export default {
       name: 'contactText',
       title: 'Contact text',
       type: 'text',
+    },
+    {
+      title: 'References Headline',
+      name: 'referencesHeadline',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'references',
+      type: 'array',
+      title: 'References',
+      description:
+        'eg. Concrete and Grass - MainStage (CN). (Enter a reference then press Enter)',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+    },
+    {
+      name: 'ctaText',
+      title: 'Call To Action Text',
+      type: 'text',
+      rows: 2,
+      validation: (Rule) =>
+        Rule.required().max(150).error('Should be max 150 characters'),
     },
     {
       title: 'Contact Email',
