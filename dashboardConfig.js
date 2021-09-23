@@ -13,8 +13,8 @@ export default {
           {
             title: 'Weboldal',
             apiId: '247875ae-d5c6-4ef4-a8d9-9df35f71fdd6',
-            buildHookId: '614cc571fb63f007d253f020',
-            name: 'gallus',
+            buildHookId: '614cc708b6a0ee0b174fc263',
+            name: 'gallusandhirundo',
           },
         ],
       },
