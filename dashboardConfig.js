@@ -11,9 +11,9 @@ export default {
           'A weboldalad azért tud olyan gyors lenni, mert előre elkészül a szerveren (ún. build folyamat), statikus. Ha kész vagy a változtatásokkal, a "Deploy" gombbal szükséges egy új "oldalépítést" (build) generálnod. (Elég egyszer megnyomni a gombot). A Netlify badge sárgára fog változni (Building). Pár perc az egész! Ha a Netlify gomb ismét zöld lesz (Success), az oldalépítés sikeres volt, és a változtatásokat látnod kell a weboldaladon. Ha esetleg az építés sikertelen volt, a gomb pirosra változik(Failed), ebben az esetben semmilyen változás nem történik a weboldaladon, a régi verzió ugyanúgy él tovább. Szólj, és megnézzük, hol a hiba. A "view" link a weboldalra visz, az "admin"-ra kattintva pedig a Netlify build folyamatot lehet nyomon követni.',
         sites: [
           {
-            title: 'DEV Weboldal',
-            apiId: '1a716a27-3f48-4d3b-ac55-6666ebe5253a',
-            buildHookId: '60e6c08e71ca4bbe6409b90f',
+            title: 'Weboldal',
+            apiId: '247875ae-d5c6-4ef4-a8d9-9df35f71fdd6',
+            buildHookId: '614cc571fb63f007d253f020',
             name: 'gallus',
           },
         ],
