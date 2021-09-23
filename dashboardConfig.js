@@ -58,7 +58,7 @@ export default {
           },
           {
             title: 'Frontend Deploy',
-            value: 'https://gallus.netlify.app/',
+            value: 'https://gallushirundo.hu',
             category: 'apps',
           },
         ],
