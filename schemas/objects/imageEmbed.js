@@ -12,7 +12,7 @@ function ImagePreview(props) {
   return (
     <>
       <div>
-        <pre>{JSON.stringify(props, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(props, null, 2)}</pre> */}
         <img
           src={imageLink}
           style={{
