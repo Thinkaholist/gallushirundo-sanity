@@ -15,6 +15,7 @@ import homePage from './documents/homePage';
 import contactPage from './documents/contactPage';
 import eventsPage from './documents/eventsPage';
 import singleArtistPage from './documents/singleArtistPage';
+import redirect from './documents/redirect';
 
 // object schemas
 import social from './objects/social';
@@ -64,5 +65,6 @@ export default createSchema({
     contactPage,
     eventsPage,
     singleArtistPage,
+    redirect,
   ]),
 });
