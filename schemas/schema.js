@@ -32,6 +32,7 @@ import eventEmbed from './objects/eventEmbed';
 import postEmbed from './objects/postEmbed';
 import artistEmbed from './objects/artistEmbed';
 import styles from './objects/styles';
+import bandcampAlbum from './objects/bandcampAlbum';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -66,5 +67,6 @@ export default createSchema({
     eventsPage,
     singleArtistPage,
     redirect,
+    bandcampAlbum,
   ]),
 });

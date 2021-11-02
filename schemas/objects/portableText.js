@@ -75,5 +75,6 @@ export default {
     // { type: 'postEmbed' },
     // { type: 'artistEmbed' },
     // { type: 'instagramEmbed' },
+    { type: 'bandcampAlbum' },
   ],
 };
