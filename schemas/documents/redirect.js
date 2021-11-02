@@ -26,8 +26,8 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Permanent',
-      name: 'permanent',
+      title: 'Is permanent',
+      name: 'isPermanent',
       type: 'boolean',
       initialValue: true,
       validation: (Rule) => Rule.required(),
