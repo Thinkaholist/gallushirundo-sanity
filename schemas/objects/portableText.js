@@ -56,6 +56,7 @@ export default {
                 title: 'Open in a new tab',
                 name: 'blank',
                 type: 'boolean',
+                initialValue: true,
               },
             ],
             blockEditor: {
