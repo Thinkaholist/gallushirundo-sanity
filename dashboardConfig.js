@@ -13,7 +13,7 @@ export default {
           {
             title: 'Weboldal',
             apiId: '247875ae-d5c6-4ef4-a8d9-9df35f71fdd6',
-            buildHookId: '614cc708b6a0ee0b174fc263',
+            buildHookId: '628dff5d7f24ee667ba66b11',
             name: 'gallusandhirundo',
           },
         ],
